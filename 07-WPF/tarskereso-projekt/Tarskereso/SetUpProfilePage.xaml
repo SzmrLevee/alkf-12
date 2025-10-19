@@ -1,0 +1,41 @@
+<UserControl x:Class="Tarskereso.SetUpProfilePage"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+    <StackPanel VerticalAlignment="Center" HorizontalAlignment="Center" Width="250">
+        <TextBlock Text="Set Up Profile" FontSize="24" Margin="0,0,0,20" HorizontalAlignment="Center"/>
+
+        <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+            <GroupBox Header="Gender" VerticalAlignment="Top" Margin="0,0,10,0">
+                <StackPanel>
+                    <RadioButton Name="MaleRadioButton" IsChecked="True" Content="Male"/>
+                    <RadioButton Name="FemaleRadioButton" Content="Female"/>
+                </StackPanel>
+            </GroupBox>
+
+            <GroupBox Header="Gender Preference" VerticalAlignment="Top" Margin="10,0,0,0">
+                <StackPanel>
+                    <RadioButton Name="MalePreferenceRadioButton" Content="Male" IsChecked="True"/>
+                    <RadioButton Name="FemalePreferenceRadioButton" Content="Female"/>
+                    <RadioButton Name="BothPreferenceRadioButton" Content="Both"/>
+                </StackPanel>
+            </GroupBox>
+        </StackPanel>
+
+        <Label Content="Interests (seaparate with comma):" Margin="0,10,0,0"/>
+        <TextBox
+            Name="InterestsTextBox"
+            Margin="0,0,0,20"
+            Height="100"
+            TextWrapping="Wrap"
+            AcceptsReturn="True"
+            HorizontalScrollBarVisibility="Disabled"
+            VerticalScrollBarVisibility="Auto"/>
+
+        <Button
+            Name="FinishButton"
+            Width="200"
+            Height="40"
+            Content="Finish"
+            Click="FinishButton_Click"/>
+    </StackPanel>
+</UserControl>
